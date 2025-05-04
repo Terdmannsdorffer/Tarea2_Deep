@@ -1,0 +1,27 @@
+Resultados de la evaluación de encoders visuales
+==================================================
+
+Mejor modelo: dinov2 + MLP
+Accuracy: 0.9500
+
+Accuracy por clase del mejor modelo:
+aeroplane: 0.9939
+bicycle: 0.9571
+bird: 0.9972
+boat: 0.9628
+bottle: 0.9745
+bus: 0.9731
+car: 0.9463
+cat: 0.9941
+chair: 0.8340
+cow: 0.9533
+diningtable: 0.7500
+dog: 0.9831
+horse: 0.9912
+motorbike: 0.9844
+person: 0.9183
+pottedplant: 0.9274
+sheep: 0.9600
+sofa: 0.7904
+train: 0.9837
+tvmonitor: 0.9766
