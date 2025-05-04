@@ -58,14 +58,8 @@ class ImageEncoders:
     def load_dinov2(self, version='vits14'):
         """Load DINOv2 model with specified version"""
         print(f"Loading DINOv2 {version}...")
-        try:
-            self.dinov2_model = torch.hub.load('facebookresearch/dinov2', f'dinov2_{version}').to(self.device)
-            self.dinov2_model.eval()
-        except Exception as e:
-            print(f"Error loading DINOv2 from hub: {e}")
-            print("Using ResNet as a simple replacement for DINOv2")
-            self.dinov2_model = self.load_resnet(34)  # Usamos ResNet34 como reemplazo
-        
+        self.dinov2_model = torch.hub.load('facebookresearch/dinov2', f'dinov2_{version}').to(self.device)
+        self.dinov2_model.eval()
         return self.dinov2_model
     
     def extract_features(self, image_path, model_type, specific_model=None):
